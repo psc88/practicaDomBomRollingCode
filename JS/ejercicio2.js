@@ -22,28 +22,28 @@ class Persona1 {
     mostrarGeneracion(){
         let edad = this.edad;
         if(edad <=1948){
-            document.write(`${this.nombre} pertenece a la generacion Silent Generation(Los niños de la posguerra)<br>
+            alert(`${this.nombre} pertenece a la generacion Silent Generation(Los niños de la posguerra)<br>
             Rango caracteristco: Austeridad`);
         }else if(edad >= 1949 && edad <=1968) {
-            document.write(`${this.nombre} pertenece a la generacion Baby Boom<br>
+            alert(`${this.nombre} pertenece a la generacion Baby Boom<br>
             Rango caracteristco: Ambición`);
         }else if(edad >= 1969 && edad <=1980){
-            document.write(`${this.nombre} pertenece a la generacion X<br>
+            alert(`${this.nombre} pertenece a la generacion X<br>
             Rango caracteristco: Obsesión por el exito`);
         }else if(edad >= 1981 && edad <=1993){
-            document.write(`${this.nombre} pertenece a la generacion Y (millennials)<br>
+            alert(`${this.nombre} pertenece a la generacion Y (millennials)<br>
             Rango caracteristco: Frustación`);
         }else {
-            document.write(`${this.nombre} pertenece a la generacion Z<br>
+            alert(`${this.nombre} pertenece a la generacion Z<br>
             Rango caracteristco: Irreverencia`);
         }
     }
     esMayorDeEdad(){
         let edad = this.edad;
         if(edad>=18){
-            document.write(`${this.nombre} es mayor de edad`);
+            alert(`${this.nombre} es mayor de edad`);
         } else {
-            document.write(`${this.nombre} es menor de edad`);
+            alert(`${this.nombre} es menor de edad`);
         }
     }
     mostrarDatos(){
@@ -57,13 +57,31 @@ class Persona1 {
     }
 }
 
+let persona1;
 
+function crearObjetoPersona(){
+    let nombreCompleto = document.querySelector('#inputNombreCompleto').value;
+    let edadPersona = document.querySelector('#inputEdad').value;
+    let dniPersona = document.querySelector('#inputDni').value;
+    // let sexo = document.querySelector('#inputEdad').value;
+    let pesoPersona = document.querySelector('#inputPeso').value;
+    let alturaPersona = document.querySelector('#inputAltura').value;
+    let añoNacimientoPersona = document.querySelector('#inputAñoNacimiento').value;
+    console.log(nombreCompleto);
+    console.log(edadPersona);
+    console.log(dniPersona);
+    // console.log(sexo);
+    console.log(pesoPersona);
+    console.log(alturaPersona);
+    console.log(añoNacimientoPersona);
 
+    persona1 = new Persona1(nombreCompleto, edadPersona, dniPersona, 'sexo', pesoPersona, alturaPersona, añoNacimientoPersona)
+}
 
-let pablo = new Persona1('Pablo', 27, 31456789, 'H', 92, 1.72, 1994);
-pablo.mostrarGeneracion();
-document.write('<br>')
-pablo.esMayorDeEdad();
-pablo.generarDni();
-document.write('<br>****Datos de la Persona****')
-pablo.mostrarDatos();
+function generacion(){
+    persona1.mostrarGeneracion();
+}
+
+function mayorDeEdad(){
+    persona1.esMayorDeEdad();
+}
