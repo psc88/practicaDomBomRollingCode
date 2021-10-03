@@ -19,7 +19,7 @@
     <head>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-          <a class="navbar-brand text-white fs-4" href="ejercicio2.html"
+          <a class="navbar-brand text-white fs-4" href="index.html"
             >DOM and BOM</a
           >
           <button
@@ -83,6 +83,7 @@
                 id="nombreCompleto"
                 placeholder="Ingrese su nombre completo"
               />
+              <div class="invalid-feedback">Datos incorrectos</div>
             </div>
             <div class="row">
               <div class="col">
@@ -126,7 +127,7 @@
               <div class="col">
                 <label for="altura" class="form-label">Altura</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   placeholder="Ingrese su altura"
                   id="altura"
@@ -137,7 +138,7 @@
                   >Año de nacimiento</label
                 >
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   placeholder="ingrese año de nacimiento"
                   id="añoNacimiento"
@@ -145,25 +146,24 @@
               </div>
             </div>
             <button
+              id="guardarDatos"
               type="submit"
               class="btn btn-primary mt-5"
-              onclick="crearObjetoPersona()"
             >
               Guardar
             </button>
-            <button
-            class="btn btn-primary mt-5"
-            onclick="generacion()"
-          >
-            Mostrar Generacion
-          </button>
-          <button
-            class="btn btn-primary mt-5"
-            onclick="mayorDeEdad()"
-          >
-            ¿Es mayor de edad?
-          </button>
+            <button class="btn btn-primary mt-5" id="mostrarGeneracion">
+              Mostrar Generacion
+            </button>
+            <button class="btn btn-primary mt-5" id="mayorDeEdad">
+              ¿Es mayor de edad?
+            </button>
           </form>
+        </article>
+        <article class="mt-3">
+          <div class="accordion accordion-flush" id="acordion">
+          </div>
+        </article>
       </section>
     </main>
 
