@@ -1,4 +1,4 @@
-// 5- Crea una clase llamada Persona que siga las siguientes condiciones:
+// Crea una clase llamada Persona que siga las siguientes condiciones:
 // Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura, año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
 // Los métodos que se debe poder utilizar  son:
 // mostrarGeneracion: este método debe mostrar un mensaje indicando a qué generación pertenece la persona creada y cual es el rasgo característico de esta generación.
@@ -166,12 +166,12 @@ botonGuardar.addEventListener("click", () => {
   localStorage.setItem("persona", JSON.stringify(agregarPersonas));
 });
 
-// ******** funcion ver Generacion ******** //
+// ******** utiliza funcion ver Generacion ******** //
 botonMostrarGeneracion.addEventListener("click", () => {
   mostrarGeneracion(agregarPersonas);
 });
 
-// ******** funcion ver si es Mayor de edad ******** //
+// ******** utiliza funcion ver si es Mayor de edad ******** //
 botonMayorDeEdad.addEventListener("click", () => {
   esMayorDeEdad(agregarPersonas);
 });
@@ -240,8 +240,5 @@ let cargaInicial = () => {
   }
 };
 
-function mayorDeEdad() {
-  persona.esMayorDeEdad();
-}
 
 cargaInicial();

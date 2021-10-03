@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Pablo Sebastian Castillo" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./CSS/styleEj3.css">
+    <title>Reloj</title>
+  </head>
+  <body>
+    <head>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand text-white fs-4" href="index.html"
+            >DOM and BOM</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ejercicio1.html">Numeros Magicos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ejercicio2.html">Generaciones</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="ejercicio3.html"
+                    aria-current="page"
+                    >Reloj</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ejercicio4.html">Cronómetro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ejercicio5.html">Temporizador</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </head>
+    <main class="container my-5 text-center">
+      <section class="azul" id="contenedorPrincipal">
+        <p id="fecha" class="fecha tituloFecha">Fecha</p>
+        <p id="hora" class="hora">Hora</p>
+        <article>
+          <button class="btn btn-azul" onclick="cambiarColor('azul')">
+            Azul
+          </button>
+          <button class="btn btn-rojo" onclick="cambiarColor('rojo')">
+            Rojo
+          </button>
+          <button class="btn btn-verde" onclick="cambiarColor('verde')">
+            Verde
+          </button>
+        </article>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./JS/ejercicio3.js"></script>
+  </body>
+</html>

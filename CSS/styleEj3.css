@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Orbitron:wght@500&display=swap");
+
+body {
+  background: #000;
+}
+
+.tituloFecha {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  color: white;
+}
+
+.hora {
+  font-family: "Londrina Outline", cursive;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 3px;
+}
+
+/* Agregar efecto Neon */
+
+.azul {
+  text-shadow: 0 0 5px #7bacff, 0 0 10px #7bacff, 0 0 20px #7bacff,
+    0 0 40px #7bacff, 0 0 80px #7bacff, 0 0 90px #7bacff, 0 0 100px #7bacff;
+}
+
+.rojo {
+  text-shadow: 0 0 5px #cc3c3c, 0 0 10px #cc3c3c, 0 0 20px #cc3c3c,
+    0 0 40px #cc3c3c, 0 0 80px #cc3c3c, 0 0 90px #cc3c3c, 0 0 100px #cc3c3c;
+}
+
+.verde {
+  text-shadow: 0 0 5px #46ad30, 0 0 10px #46ad30, 0 0 20px #46ad30,
+    0 0 40px #46ad30, 0 0 80px #46ad30, 0 0 90px #46ad30, 0 0 100px #46ad30;
+}
+
+/* botones */
+
+.btn-azul {
+  background: #7bacff;
+}
+.btn-rojo {
+  background: #cc3c3c;
+}
+.btn-verde {
+  background: #46ad30;
+}
