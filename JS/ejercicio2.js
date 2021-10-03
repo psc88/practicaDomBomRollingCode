@@ -8,6 +8,7 @@
 
 // Luego crea la interfaz necesaria para que el usuario pueda crear un objeto persona, permitiendo ingresar las propiedades mediante un formulario, también agregar los botones “mostrar generacion”, es “mayor de edad” e indicar en un alert el resultado de la función correspondiente.
 
+//objeto Persona
 class Personas {
   constructor(nombre, edad, dni, sexo, peso, altura, añoDeNacimiento) {
     (this.nombre = nombre),
@@ -60,10 +61,10 @@ function esMayorDeEdad(agregarPersonas) {
   }
 }
 
+/********* array de objetos *********/
 let agregarPersonas = [];
 
 /********* Validaciones *********/
-
 function validarCampoRequerido(input) {
   if (input.value.trim() != "") {
     input.className = "form-control is-valid";
@@ -117,6 +118,7 @@ function validarAñoNacimiento(input) {
   }
 }
 
+/********* valores de los campos input y button *********/
 let nombreCompleto = document.querySelector("#nombreCompleto");
 let edadPersona = document.querySelector("#edad");
 let dniPersona = document.querySelector("#dni");
@@ -129,6 +131,7 @@ let botonMostrarGeneracion = document.querySelector("#mostrarGeneracion");
 let botonMayorDeEdad = document.querySelector("#mayorDeEdad");
 let listarPersonas = document.querySelector("#acordion");
 
+/********* eventos blur *********/
 nombreCompleto.addEventListener("blur", () => {
   validarCampoRequerido(nombreCompleto);
 });
@@ -177,7 +180,6 @@ botonMayorDeEdad.addEventListener("click", () => {
 });
 
 // ******** funcion Crear Lista ********
-
 let crearLista = (agregarPersonas) => {
   let contendedor = document.createElement("div");
   let accordionPersona = `
@@ -232,7 +234,6 @@ let crearLista = (agregarPersonas) => {
 // ******** Mostrar datos por pantalla ******** //
 let cargaInicial = () => {
   agregarPersonas = JSON.parse(localStorage.getItem("persona")) || [];
-
   if (agregarPersonas.length > 0) {
     agregarPersonas.forEach((agregarPersonas) => {
       crearLista(agregarPersonas);
@@ -240,5 +241,5 @@ let cargaInicial = () => {
   }
 };
 
-
+/********* llamado a la funcion *********/
 cargaInicial();
