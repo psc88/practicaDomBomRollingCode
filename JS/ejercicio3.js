@@ -60,7 +60,7 @@ function obtenerFecha() {
       horas = '0' + horas;
     }
     
-    parrafoHora.innerHTML = `${fecha.getHours()}:${minutos}:${segundos}`;
+    parrafoHora.innerHTML = `${horas}:${minutos}:${segundos}`;
   }
   setInterval(obtenerFecha, 1000);
   

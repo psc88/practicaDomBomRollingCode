@@ -14,7 +14,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
     <head>
@@ -69,13 +69,12 @@
     <main class="container my-5 text-center">
       <section class="azul" id="contenedorPrincipal">
         <article class="d-flex justify-content-center">
-            <p id="cronometro" class="fecha tituloCronometro">00:00:00</p>
+          <p id="cronometro" class="fecha tituloCronometro p-2">00:00:00</p>
         </article>
         <article>
-          <button class="btn btn-azul fs-2" onclick="iniciarCronometro()">
-            Iniciar
-          </button>
-          </button>
+          <button class="btn btn-azul fs-2" id="botonInicar">Iniciar</button>
+          <button class="btn btn-danger fs-2" id="botonParar">Parar</button>
+          <button class="btn btn-verde fs-2" id="botonReiniciar">Reiniciar</button>
         </article>
       </section>
     </main>
