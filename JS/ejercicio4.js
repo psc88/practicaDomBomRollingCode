@@ -1,7 +1,4 @@
-let milisegundo = 0;
-let segundo = 0;
-let minuto = 0;
-
+// funcion inicial de arranque
 onload = iniciar();
 function iniciar() {
   let cronometroIniciar = document.querySelector("#botonInicar");
@@ -15,6 +12,7 @@ function iniciar() {
   horas = 0;
 }
 
+// funcion para cronometrar el tiempo y sacar el evento click
 function cronometrar() {
   let boton = document.querySelector("#botonInicar");
   obtenerTiempo();
@@ -24,6 +22,7 @@ function cronometrar() {
     .removeEventListener("click", cronometrar);
 }
 
+// funcion que se repite cada segundo 
 function obtenerTiempo() {
   let horasAuxiliar, minutosAuxiliar, segundosAuxiliar;
   segundos++;
@@ -61,11 +60,13 @@ function obtenerTiempo() {
   cronometro.innerHTML = `${horasAuxiliar}:${minutosAuxiliar}:${segundosAuxiliar}`;
 }
 
+// funcion para parar el cronometro
 function pararCronometro() {
   clearInterval(id);
   document.querySelector("#botonInicar").addEventListener("click", cronometrar);
 }
 
+//funcion para reiniciar el cronometro
 function reiniciarCronometro() {
   clearInterval(id);
   document.querySelector("#cronometro").innerHTML = "00:00:00";
